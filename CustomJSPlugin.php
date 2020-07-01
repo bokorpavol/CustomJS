@@ -130,7 +130,8 @@ function customjs_show() {
 			if(isset($customjs_data->customjs_js_content)) $value = $customjs_data->customjs_js_content;
 		?>
 		<p>
-		<label for="lb_customjs_js_content" ><?php i18n($thisfile_customjs.'/CUSTOMJS_CONTENT'); ?></label>
+		<label for="lb_customjs_js_content" class="tooltip"><?php i18n($thisfile_customjs.'/CUSTOMJS_CONTENT'); ?> (?)<span class="tooltiptext"><?php i18n($thisfile_customjs.'/CUSTOMJS_TOOLTIP'); ?></span></label>
+		
 		<textarea id="lb_customjs_js_content" name="customjs_js_content" type="text"><?php echo $value; ?></textarea>
 		</p>
 		
@@ -141,6 +142,9 @@ function customjs_show() {
 	</form>
 	
 	<small> <a href="https://github.com/bokorpavol/CustomJS" target="_blank">Custom JS on GitHub</a>::<a href="https://www.4enzo.sk/" target="_blank">Author website</a></small>
+<style>
+.tooltip .tooltiptext{visibility:hidden;width:250px;background-color:#000;color:#fff;text-align:center;border-radius:6px;padding:5px 0;position:absolute;z-index:1}.tooltip:hover .tooltiptext{visibility:visible}
+</style>
 <script>
 window.onload=function(){var e=CodeMirror.newFoldFunction(CodeMirror.braceRangeFinder);function t(){var e=$(".CodeMirror-scroll");e.hasClass("fullscreen")?(e.removeClass("fullscreen"),e.height(t.beforeFullscreen.height),e.width(t.beforeFullscreen.width),r.refresh()):(t.beforeFullscreen={height:e.height(),width:e.width()},e.addClass("fullscreen"),e.height("100%"),e.width("100%"),r.refresh())}var r=CodeMirror.fromTextArea(document.getElementById("lb_customjs_js_content"),{lineNumbers:!0,matchBrackets:!0,indentUnit:4,indentWithTabs:!0,enterMode:"keep",mode:"text/css",tabMode:"shift",theme:"default",onGutterClick:e,extraKeys:{"Ctrl-Q":function(t){e(t,t.getCursor().line)},F11:t,Esc:t},onCursorActivity:function(){r.setLineClass(i,null),i=r.setLineClass(r.getCursor().line,"activeline")}}),i=r.setLineClass(0,"activeline")};
 </script>	
