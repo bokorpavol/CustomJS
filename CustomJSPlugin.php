@@ -17,14 +17,14 @@ i18n_merge($thisfile_customjs) || i18n_merge($thisfile_customjs, 'en_US');
 
 # register plugin
 register_plugin(
-	$thisfile_customjs,								# ID of plugin, should be filename minus php
+	$thisfile_customjs,				# ID of plugin, should be filename minus php
 	i18n_r($thisfile_customjs.'/CUSTOMJS_TITLE'),	# Title of plugin
-	'0.1',											# Version of plugin
-	'Pavol Bokor',									# Author of plugin
-	'https://4enzo.sk',								# Author URL
+	'0.1',						# Version of plugin
+	'Pavol Bokor',					# Author of plugin
+	'https://4enzo.sk',				# Author URL
 	i18n_r($thisfile_customjs.'/CUSTOMJS_DESC'),	# Plugin Description
-	'theme',										# Page type of plugin
-	'customjs_show'									# Function that displays content
+	'theme',					# Page type of plugin
+	'customjs_show'					# Function that displays content
 );
 
 # hooks
